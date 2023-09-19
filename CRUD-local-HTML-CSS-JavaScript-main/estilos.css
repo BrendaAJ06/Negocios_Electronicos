@@ -1,14 +1,15 @@
+/* Estilos generales */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
 body {
-    background-color: rgb(232, 255, 205);
+    background-color: rgb(209, 36, 180);
 }
 
+/* Estilos para el título */
 .div-titulo {
     width: 100%;
     height: 100px;
@@ -21,6 +22,7 @@ body {
     font-weight: 300;
 }
 
+/* Estilos para el contenedor principal */
 .contenedor {
     width: 100%;
     height: calc(100vh - 100px);
@@ -28,12 +30,12 @@ body {
     justify-content: center;
 }
 
-/* ESTILOS FORMULARIO */
+/* Estilos para el formulario */
 .contenedor .div-formulario {
     width: 30%;
-    height: 250px;
+    height: 270px;
     margin: 15px 15px;
-    background-color: rgb(135, 132, 132);
+    background-color: rgb(2, 0, 0);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -46,7 +48,7 @@ body {
     margin-top: 10px;
     font-weight: 300;
     font-size: 2em;
-    color: rgb(167, 87, 87);
+    color: rgb(255, 255, 255);
 }
 
 .contenedor .div-formulario form {
@@ -65,12 +67,12 @@ body {
     margin: 10px 10px;
 }
 
-/* ESTILOS LISTADO */
+/* Estilos para el listado de productos */
 .contenedor .div-listado {
     width: 55%;
     height: calc(100% - 50px);
     margin: 15px 15px;
-    background-color: rgb(135, 132, 132);
+    background-color: rgb(0, 0, 0);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -85,7 +87,7 @@ body {
     color: whitesmoke;
 }
 
-.contenedor .div-listado .div-empleados {
+.contenedor .div-listado .div-productos {
     width: 100%;
     height: 100%;
     display: flex;
@@ -95,7 +97,7 @@ body {
     padding: 0 30px;
 }
 
-.contenedor .div-listado .div-empleados p {
+.contenedor .div-listado .div-productos p {
     margin: 10px 0;
     font-size: 1em;
     color: #ddd;
@@ -106,12 +108,14 @@ hr {
     height: 1px;
 }
 
+/* Estilos para los botones */
 .btn {
     padding: 5px 10px;
     border: none;
     margin: 0 5px;
     color: rgb(255, 255, 255);
     border-radius: 50px;
+
 }
 
 .btn-editar {
