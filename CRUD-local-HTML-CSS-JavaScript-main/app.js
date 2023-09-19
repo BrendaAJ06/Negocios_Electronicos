@@ -1,16 +1,17 @@
-let listaEmpleados = [];
+let listaProductos = [];
 
-const objEmpleado = {
+const objProducto = {
     id: '',
     nombre: '',
-    fecha: ''
+    descripcion: ''
 }
 
 let editando = false;
 
 const formulario = document.querySelector('#formulario');
+const idInput = document.querySelector('#id');
 const nombreInput = document.querySelector('#nombre');
-const fechaInput = document.querySelector('#fecha');
+const descripcionInput = document.querySelector('#descripcion');
 const btnAgregarInput = document.querySelector('#btnAgregar');
 
 formulario.addEventListener('submit', validarFormulario);
@@ -18,101 +19,102 @@ formulario.addEventListener('submit', validarFormulario);
 function validarFormulario(e) {
     e.preventDefault();
 
-    if(nombreInput.value === '' || fechaInput.value === '') {
+    if(idInput.value === '' || nombreInput.value === '' || descripcionInput.value === '') {
         alert('Todos los campos se deben llenar');
         return;
     }
 
     if(editando) {
-        editarEmpleado();
+        editarProducto();
         editando = false;
     } else {
-        objEmpleado.id = Date.now();
-        objEmpleado.nombre = nombreInput.value;
-        objEmpleado.fecha = fechaInput.value;
+        objProducto.id = idInput.value;
+        objProducto.nombre = nombreInput.value;
+        objProducto.descripcion = descripcionInput.value;
 
-        agregarEmpleado();
+        agregarProducto();
     }
 }
 
-function agregarEmpleado() {
+function agregarProducto() {
 
-    listaEmpleados.push({...objEmpleado});
+    listaProductos.push({...objProducto});
 
-    mostrarEmpleados();
+    mostrarProductos();
 
     formulario.reset();
     limpiarObjeto();
 }
 
 function limpiarObjeto() {
-    objEmpleado.id = '';
-    objEmpleado.nombre = '';
-    objEmpleado.fecha = '';
+    objProducto.id = '';
+    objProducto.nombre = '';
+    objProducto.descripcion = '';
 }
 
-function mostrarEmpleados() {
+function mostrarProductos() {
     limpiarHTML();
 
-    const divEmpleados = document.querySelector('.div-empleados');
+    const divProductos = document.querySelector('.div-productos');
     
-    listaEmpleados.forEach(empleado => {
-        const {id, nombre, fecha} = empleado;
+    listaProductos.forEach(producto => {
+        const {id, nombre, descripcion} = producto;
 
         const parrafo = document.createElement('p');
-        parrafo.textContent = `${id} - ${nombre} - ${fecha} - `;
+        parrafo.textContent = `ID: ${id} - Nombre: ${nombre} - Descripción: ${descripcion} - `;
         parrafo.dataset.id = id;
 
         const editarBoton = document.createElement('button');
-        editarBoton.onclick = () => cargarEmpleado(empleado);
+        editarBoton.onclick = () => cargarProducto(producto);
         editarBoton.textContent = 'Editar';
         editarBoton.classList.add('btn', 'btn-editar');
         parrafo.append(editarBoton);
 
         const eliminarBoton = document.createElement('button');
-        eliminarBoton.onclick = () => eliminarEmpleado(id);
+        eliminarBoton.onclick = () => eliminarProducto(id);
         eliminarBoton.textContent = 'Eliminar';
         eliminarBoton.classList.add('btn', 'btn-eliminar');
         parrafo.append(eliminarBoton);
 
         const hr = document.createElement('hr');
 
-        divEmpleados.appendChild(parrafo);
-        divEmpleados.appendChild(hr);
+        divProductos.appendChild(parrafo);
+        divProductos.appendChild(hr);
     });
 }
 
-function cargarEmpleado(empleado) {
-    const {id, nombre, fecha} = empleado;
+function cargarProducto(producto) {
+    const {id, nombre, descripcion} = producto;
 
+    idInput.value = id;
     nombreInput.value = nombre;
-    fechaInput.value = fecha;
+    descripcionInput.value = descripcion;
 
-    objEmpleado.id = id;
+    objProducto.id = id;
 
     formulario.querySelector('button[type="submit"]').textContent = 'Actualizar';
     
     editando = true;
 }
 
-function editarEmpleado() {
+function editarProducto() {
 
-    objEmpleado.nombre = nombreInput.value;
-    objEmpleado.fecha = fechaInput.value;
+    objProducto.nombre = nombreInput.value;
+    objProducto.descripcion = descripcionInput.value;
 
-    listaEmpleados.map(empleado => {
+    listaProductos.map(producto => {
 
-        if(empleado.id === objEmpleado.id) {
-            empleado.id = objEmpleado.id;
-            empleado.nombre = objEmpleado.nombre;
-            empleado.fecha = objEmpleado.fecha;
+        if(producto.id === objProducto.id) {
+            producto.id = objProducto.id;
+            producto.nombre = objProducto.nombre;
+            producto.descripcion = objProducto.descripcion;
 
         }
 
     });
 
     limpiarHTML();
-    mostrarEmpleados();
+    mostrarProductos();
     formulario.reset();
 
     formulario.querySelector('button[type="submit"]').textContent = 'Agregar';
@@ -120,17 +122,17 @@ function editarEmpleado() {
     editando = false;
 }
 
-function eliminarEmpleado(id) {
+function eliminarProducto(id) {
 
-    listaEmpleados = listaEmpleados.filter(empleado => empleado.id !== id);
+    listaProductos = listaProductos.filter(producto => producto.id !== id);
 
     limpiarHTML();
-    mostrarEmpleados();
+    mostrarProductos();
 }
 
 function limpiarHTML() {
-    const divEmpleados = document.querySelector('.div-empleados');
-    while(divEmpleados.firstChild) {
-        divEmpleados.removeChild(divEmpleados.firstChild);
+    const divProductos = document.querySelector('.div-productos');
+    while(divProductos.firstChild) {
+        divProductos.removeChild(divProductos.firstChild);
     }
 }
