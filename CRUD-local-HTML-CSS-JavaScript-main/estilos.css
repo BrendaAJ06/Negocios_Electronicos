@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: rgb(209, 36, 180);
+    background-color: rgb(226, 120, 120);
 }
 
 /* Estilos para el título */
@@ -125,3 +125,4 @@ hr {
 .btn-eliminar {
     background-color: red;
 }
+
