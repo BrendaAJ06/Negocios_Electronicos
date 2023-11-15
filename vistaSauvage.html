@@ -81,6 +81,8 @@
                         al carrito</button>
                     <!-- Botón "Agregar al carrito" que llama a la función addToCart() -->
 
+                    <div id="paypal-payment-button"></div>
+
                     <div class="product-description">
                         <h2>Descripcion del producto</h2>
                         <span>Mantén intacto tu espíritu poderoso con Sauvage Parfum. 𝐄𝐦𝐨𝐜𝐢𝐨𝐧𝐞𝐬 𝐲 𝐬𝐞𝐧𝐬𝐚𝐜𝐢𝐨𝐧𝐞𝐬 𝐪𝐮𝐞 𝐭𝐫𝐚𝐧𝐬𝐦𝐢𝐭𝐞 𝐥𝐚 𝐟𝐫𝐚𝐠𝐚𝐧𝐜𝐢𝐚 𝐒𝐚𝐮𝐯𝐚𝐠𝐞 𝐝𝐞 𝐃𝐢𝐨𝐫:
@@ -145,12 +147,41 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
     <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
-    <script src="aviso-cookies.js"></script>
+
 
 
     <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
-    <script src="script.js"></script>
+
+     <script
+        src="https://www.paypal.com/sdk/js?client-id=AQPvPUp8GZmhu-ik5onHYRS6skSYR0mR79sySgALgiR8w9AKT7Alw4cFe883FfMz4OYhOFAJkdaYy71t&components=buttons">
+    </script>
+
+        <script>
+            paypal.Buttons({
+                style: {
+                    layout: 'vertical',
+            border: 'none', /* Elimina el borde del botón */
+            padding: '10px 20px', /* Agrega un espacio interno dentro del botón */  
+            cursor: 'pointer', /* Cambia el cursor del mouse al pasar sobre el botón */
+            color: 'blue',
+            shape: 'rect',
+            label: 'paypal'
+        },
+            createOrder: function (data, actions) {
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value: '3850'
+                        }
+                    }]
+                });
+            },
+            onCancel: function (data) {
+                alert("Pago Cancelado")
+            }
+        }).render('#paypal-payment-button');
+    </script>
 
 
 
