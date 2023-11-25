@@ -26,6 +26,38 @@
   gtag('js', new Date());
 
   gtag('config', 'G-4LTLCWXEBE');
+
+var cart = [];
+    function addToCart(productName, productPrice) {
+    var quantity = parseInt(document.getElementById("quantity").value);
+    var total = productPrice * quantity;
+
+    var item = {
+        name: productName,
+        price: productPrice,
+        quantity: quantity,
+        total: total
+    };
+
+    cart.push(item);
+
+    updateCartView(); // Actualiza la visualización del carrito
+}
+
+function updateCartView() {
+    var cartItemsDiv = document.getElementById("cart-items");
+    cartItemsDiv.innerHTML = ""; // Limpiar el contenido actual del área de carrito
+
+    // Recorre el carrito y agrega elementos al área de carrito
+    for (var i = 0; i < cart.length; i++) {
+        var cartItem = cart[i];
+
+        var itemDiv = document.createElement("div");
+        itemDiv.innerHTML = `<p>${cartItem.name} - Cantidad: ${cartItem.quantity} - Precio: $${cartItem.price} - Total: $${cartItem.total}</p>`;
+
+        cartItemsDiv.appendChild(itemDiv);
+    }
+}
 </script>
 
 </head>
@@ -83,6 +115,8 @@
                     <button
                         onclick="addToCart('img/opencart/dulces-de-la-rosa-caramelos-suaves-aciduladito-800x600.png')">Agregar
                         al carrito</button>
+                    <button onclick="addToCart('Bergamot-Bloom', 7,301)">Agregar al carrito</button>
+
                     <!-- Botón "Agregar al carrito" que llama a la función addToCart() -->
             <div id="paypal-payment-button"></div>
 
