@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nombre del Producto || Essenitia</title>
+    <title>Dylan Blue || Essentia</title>
     <meta name="description" content="Bienvenido a Essentia, tu destino para descubrir fragancias exclusivas y experiencias sensoriales únicas. Explora nuestra colección de perfumes de alta calidad que narran historias de elegancia y sofisticación. Descubre la esencia de cada momento con Essentia.">
     <meta name="keywords" content="Essentia, perfumes, fragancias exclusivas, elegancia, sofisticación, experiencias sensoriales, boutique de perfumes">
     <link rel="canonical" href="https://brendaaj06.github.io/Negocios_Electronicos/" />
@@ -19,46 +19,13 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTLCWXEBE"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-4LTLCWXEBE');
-
-var cart = [];
-    function addToCart(productName, productPrice) {
-    var quantity = parseInt(document.getElementById("quantity").value);
-    var total = productPrice * quantity;
-
-    var item = {
-        name: productName,
-        price: productPrice,
-        quantity: quantity,
-        total: total
-    };
-
-    cart.push(item);
- console.log("Producto agregado al carrito:", item);
-    updateCartView(); // Actualiza la visualización del carrito
-}
-
-function updateCartView() {
-    var cartItemsDiv = document.getElementById("cart-items");
-    cartItemsDiv.innerHTML = ""; // Limpiar el contenido actual del área de carrito
-
-    // Recorre el carrito y agrega elementos al área de carrito
-    for (var i = 0; i < cart.length; i++) {
-        var cartItem = cart[i];
-
-        var itemDiv = document.createElement("div");
-        itemDiv.innerHTML = `<p>${cartItem.name} - Cantidad: ${cartItem.quantity} - Precio: $${cartItem.price} - Total: $${cartItem.total}</p>`;
-
-        cartItemsDiv.appendChild(itemDiv);
-    }
-}
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTLCWXEBE"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-4LTLCWXEBE');
+    </script>
 
 </head>
 
@@ -78,76 +45,44 @@ function updateCartView() {
                 <li><a href="sesion.html" title="Iniciar sesion"><i class="fa fa-user-circle" aria-hidden="true"></i></a></li>
             </ul>
         </div>
-
     </section>
 
     <section id="prodetails" class="section-p1">
         <div class="single-pro-image">
-            <img src="perfumes/Bergamot-Bloom2.jpg" width="100%" id="ImgPrinc" alt="Bergamot-Bloom" title="Bergamot-Bloom">
+            <img src="perfumes/Dylan Blue Pour Homme.jpg" width="100%" id="ImgPrinc" alt="Bergamot-Bloom" title="Bergamot-Bloom">
 
             <div class="small-img-group">
                 <div class="small-img-col">
-                    <img src="perfumes/Bergamot-Bloom.jpg" width="100" id="peque-img" alt="Bergamot-Bloom" title="Bergamot-Bloom">
+                    <img src="perfumes/Dylan Blue Pour Homme 2.jpg" width="100" id="peque-img" alt="Bergamot-Bloom" title="Bergamot-Bloom">
                 </div>
-
                 <div class="small-img-col">
-                    <img src="perfumes/Bergamot-Bloom3.jpg" width="100" id="peque-img" alt="Bergamot-Bloom" title="Bergamot-Bloom">
-                </div>
-
-                <div class="small-img-col">
-                    <img src="perfumes/Bergamot-Bloom.jpg" width="100" id="peque-img" alt="Bergamot-Bloom" title="Bergamot-Bloom">
+                    <img src="perfumes/Dylan Blue Pour Homme 3.jpg" width="100" id="peque-img" alt="Bergamot-Bloom" title="Bergamot-Bloom">
                 </div>
             </div>
-
-            <div></div>
-
         </div>
 
         <div class="single-pro-details">
-            <h6>Bergamot Bloom</h6>
-            <h5>Carolina Herrera</h5>
-            <h2>$7,301.00</h2>
-                    <!-- Precio del producto -->
-                    <label for="quantity">Cantidad:</label>
-                    <!-- Etiqueta para el campo de cantidad -->
-                    <input type="number" id="quantity" name="quantity" min="1" value="1">
-                    <!-- Campo de entrada numérico para la cantidad del producto -->
-                    <button
-                        onclick="addToCart('Bergamot-Bloom', 7301)">Agregar al carrito</button>
-                    
+            <h6>Versace</h6>
+            <h5>Dylan Blue Pour Homme</h5>
+            <h2>$2,450.00</h2>
 
-                    <!-- Botón "Agregar al carrito" que llama a la función addToCart() -->
-            <div id="paypal-payment-button"></div>
+            <label for="quantity">Cantidad:</label>
+            <input type="number" id="quantity" name="quantity" min="1" value="1">
+            <button onclick="addToCart('Dylan Blue Pour Homme', 2450)">Agregar al carrito</button>
 
-                    <div class="product-description">
-                        <h2>Descripcion del producto</h2>
-                        <span>Bergamot Bloom expresa una sensación de paz interior similar a la del mágico silencio de un hogar
-                             vacacional. Esta fragancia, una luminosa explosión que converge en una amaderada sensualidad, está dedicada al mayor de los lujos: el tiempo.</span>
-                    </div>
+            <div class="product-description">
+                <h2>Descripcion del producto</h2>
+                <span>Versace Pour Homme Dylan Blue de Versace es una fragancia de la familia olfativa Aromática Fougère para Hombres.</span>
+            </div>
         </div>
     </section>
 
     <section id="long-description">
         <div class="details-product">
             <h2>Detalles del producto</h2>
-            <p class="normal"> Bergamot Bloom comienza con una frescura radiante que gradualmente se va transformando en un aroma floral. 
-            El jazmín le concede sus notas más ricas y se vuelve sensual y casi sugerente. Mientras que el jengibre aumenta
-             su vitalidad y el limón destaca su frescura cítrica, la pimienta rosa y una combinación de jazmín y Paradisone 
-             aportan efervescencia y blancura a la mezcla.</p>
-            <p> Las Notas de Salida son bergamota, limón (lima ácida) y jengibre; las Notas de Corazón son jazmín y pimienta
-                 rosa; las Notas de Fondo son ambroxan, vetiver y pachulí.</p>
-            
-            <p>Los acordes principales de este perfume son:<br>
-                cítrico<br>
-                aromático<br>
-                floral blanco<br>
-                amaderado<br>
-                cálido especiado<br>
-                ámbar<br>
-                fresco especiado<br>
-                terrosos<br>
-                almizclado<br>
-                fresco</p>
+            <p class="normal"> Versace Pour Homme Dylan Blue se lanzó en 2016. La Nariz detrás de esta fragrancia es Alberto Morillas.
+                Las Notas de Salida son bergamota de Calabria, notas acuáticas, toronja (pomelo) y hojas de higuera; las Notas de Corazón son ambroxan,
+                pimienta negra, pachulí, hojas de violeta y papiro de Egipto; las Notas de Fondo son incienso, almizcle, haba tonka y azafrán. </p>
         </div>
     </section>
 
@@ -158,6 +93,8 @@ function updateCartView() {
             <p><strong>Direccion:</strong>Av. Adolfo López Mateos Ote. 1801, Bona Gens, 20256 Aguascalientes, Ags.</p>
             <p><strong>Telefono:</strong>449 960 9129</p>
             <p><strong>Horario de Atencion:</strong>9:00 - 20:00,Lunes - Domingos</p>
+       
+
         </div>
     </footer>
 
