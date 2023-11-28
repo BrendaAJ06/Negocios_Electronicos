@@ -1,0 +1,65 @@
+/* Estilos para la lista de comentarios */
+#commentList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#commentList li {
+  background-color: #f2f2f2;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  color: black; /* Agrega esta línea para el color del texto */
+}
+
+#commentList li:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+/* Estilos para el formulario */
+.section {
+  background-color: #000000;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.section h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.section form {
+  display: flex;
+  flex-direction: column;
+}
+
+.section .form-group {
+  margin-bottom: 20px;
+}
+
+.section label {
+  font-weight: bold;
+}
+
+.section input[type="text"],
+.section input[type="email"],
+.section textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  color: black;
+}
+
+.section button[type="submit"] {
+  padding: 10px 20px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.section button[type="submit"]:hover {
+  background-color: #45a049;
+}
