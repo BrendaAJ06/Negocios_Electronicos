@@ -38,7 +38,7 @@
         <div>
             <ul id="navbar">
                 <li><a href="index.html" title="Landing-Page">Inicio</a></li>
-                <li><a class="active" title="Catalogo de Productos" href="shop.html">Catalogo</a></li>
+                <li><a class="active" title="Catalogo de Productos" href="Catalogo.html">Catalogo</a></li>
                 <li><a href="blog.html"title="Agenda">Agenda</a></li>
                 <li><a href="about.html" title="Sobre Nosotros">Sobre Nosotros</a></li>
                 <li><a href="contact.html" title="Contactanos">Contactanos</a></li>
@@ -63,41 +63,10 @@
                     <img src="perfumes/Dylan Blue Pour Homme 3.jpg" width="100" id="peque-img" alt="Bergamot-Bloom" title="Bergamot-Bloom">
                 </div>
             </div>
-
-            <div></div>
-
         </div>
-
-        <div class="single-pro-details">
-            <h6>Versace</h6>
-            <h5>Dylan Blue Pour Homme</h5>
-            <h2>$2,450.00</h2>
-                    <!-- Precio del producto -->
-                    <label for="quantity">Cantidad:</label>
-                    <!-- Etiqueta para el campo de cantidad -->
-                    <input type="number" id="quantity" name="quantity" min="1" value="1">
-                    <!-- Campo de entrada numérico para la cantidad del producto -->
-                    <button
-                        onclick="addToCart('img/opencart/dulces-de-la-rosa-caramelos-suaves-aciduladito-800x600.png')">Agregar
-                        al carrito</button>
-                    <!-- Botón "Agregar al carrito" que llama a la función addToCart() -->
-
-                    <div class="product-description">
-                        <h2>Descripcion del producto</h2>
-                        <span>Versace Pour Homme Dylan Blue de Versace es una fragancia de la familia olfativa Aromática Fougère para Hombres.</span>
-                    </div>
-        </div>
+        <div id="producto"></div>
     </section>
 
-    <section id="long-description">
-        <div class="details-product">
-            <h2>Detalles del producto</h2>
-            <p class="normal"> Versace Pour Homme Dylan Blue se lanzó en 2016. La Nariz detrás de esta fragrancia es Alberto Morillas.
-                 Las Notas de Salida son bergamota de Calabria, notas acuáticas, toronja (pomelo) y hojas de higuera; las Notas de Corazón son ambroxan,
-                  pimienta negra, pachulí, hojas de violeta y papiro de Egipto; las Notas de Fondo son incienso, almizcle, haba tonka y azafrán. </p>
-            
-        </div>
-    </section>
 
     <footer class="section-p1">
         <div class="col">
@@ -151,6 +120,7 @@
 
 
     <script src="script.js"></script>
+    <script src="vista_Dylan.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>

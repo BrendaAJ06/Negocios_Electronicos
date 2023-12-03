@@ -1,36 +1,72 @@
-/* Asumiendo que cada producto tiene la clase "producto" */
+/* Reset de estilos */
+body,
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+}
+
 .producto {
-  text-align: center;
+    margin: 10px;
 }
 
-.producto .pro {
-  border: 1px solid #ddd;
-  margin: 10px;
-  padding: 15px;
-  text-align: center;
-  width: 250px;
-  background-color: #fff;
-  text-align: center;
+.card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+    background-color: #fff;
 }
 
-.producto .pro:hover {
-  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+.card img {
+    height:150px;
+    width: auto;
+    position: relative;
+      margin: auto;
 }
 
-.producto .pro img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 20px;
+.producto h3 {
+    color: #007bff;
 }
 
-.producto .btn-success {
-  background-image: url(img/button.png);
-  background-color: transparent;
-  color: #202905;
-  border: 0;
-  padding: 14px 80px 14px 65px;
-  background-repeat: no-repeat;
-  cursor: pointer;
-  font-weight: 700;
-  font-size: 15px;
+.producto h5,
+.producto h4 {
+    color: #343a40;
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+    margin-top: 10px;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+#res {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }

@@ -93,9 +93,73 @@
     margin-left: 25px;
 }
 
-#long-description .details-products{
+
+/* Estilos específicos para la clase "stylevistaproductos" */
+.stylevistaproductos .single-pro-details {
     width: 50%;
     padding-top: 30px;
     margin-left: 25px;
 }
 
+.stylevistaproductos .single-pro-details h4 {
+    padding: 40px 0 20px 0;
+}
+
+.stylevistaproductos .single-pro-details h5 {
+    padding: 10px 0 10px 0;
+    font-size: 40px;
+}
+
+.stylevistaproductos .single-pro-details h2 {
+    font-size: 26px;
+}
+
+.stylevistaproductos .single-pro-details h4 {
+    width: 50px;
+    height: 47px;
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.stylevistaproductos .single-pro-details input {
+    width: 50px;
+    height: 47px;
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.stylevistaproductos .single-pro-details input:focus {
+    outline: none;
+}
+
+.stylevistaproductos .single-pro-details button {
+    background: #1E3700;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.stylevistaproductos .single-pro-details span {
+    line-height: 25px;
+}
+
+.stylevistaproductos .product-description {
+    margin-top: 20px;
+}
+
+.stylevistaproductos #long-description {
+    display: flex;
+    margin-top: 20px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.stylevistaproductos #long-description .details-products {
+    width: 50%;
+    padding-top: 30px;
+    margin-left: 25px;
+}

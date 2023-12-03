@@ -38,7 +38,7 @@
         <div>
             <ul id="navbar">
                 <li><a href="index.html" title="Landing-Page">Inicio</a></li>
-                <li><a class="active" title="Catalogo de Productos" href="shop.html">Catalogo</a></li>
+                <li><a class="active" title="Catalogo de Productos" href="Catalogo.html">Catalogo</a></li>
                 <li><a href="blog.html"title="Agenda">Agenda</a></li>
                 <li><a href="about.html" title="Sobre Nosotros">Sobre Nosotros</a></li>
                 <li><a href="contact.html" title="Contactanos">Contactanos</a></li>
@@ -68,46 +68,8 @@
                 </div>
             </div>
 
-            <div></div>
-
         </div>
-
-        <div class="single-pro-details">
-            <h6>Dior</h6>
-            <h5>Phantom Le Parfum</h5>
-            <h2>$2,150.00</h2>
-                    <!-- Precio del producto -->
-                    <label for="quantity">Cantidad:</label>
-                    <!-- Etiqueta para el campo de cantidad -->
-                    <input type="number" id="quantity" name="quantity" min="1" value="1">
-                    <!-- Campo de entrada numérico para la cantidad del producto -->
-                    <button
-                        onclick="addToCart('img/opencart/dulces-de-la-rosa-caramelos-suaves-aciduladito-800x600.png')">Agregar
-                        al carrito</button>
-                    <!-- Botón "Agregar al carrito" que llama a la función addToCart() -->
-                    <div id="paypal-payment-button"></div>
-
-                    <div class="product-description">
-                        <h2>Descripcion del producto</h2>
-                        <span>Phantom Parfum de Rabanne es la esencia misma de la masculinidad, alimentada por pasiones ardientes, 
-                      que revela un aura seductora. Inspirada en las diferentes facetas de la masculinidad moderna, esta mezcla intensa 
-                      combina lavanda electrizante, vainilla adictiva y vetiver seductor. .</span>
-                    </div>
-        </div>
-    </section>
-
-    <section id="long-description">
-        <div class="details-product">
-            <h2>Detalles del producto</h2>
-            <p class="normal"> Phantom Parfum de Rabanne es la esencia misma de la masculinidad, alimentada por pasiones ardientes, 
-              que revela un aura seductora. Inspirada en las diferentes facetas de la masculinidad moderna, esta mezcla intensa combina 
-              lavanda electrizante, vainilla adictiva y vetiver seductor. Phantom Parfum de Rabanne es una oda al hombre que se atreve a 
-              vivir peligrosamente: más oscuro, sulfuroso, cada vez más seductor y atractivo que nunca. Rompe con las convenciones con 
-              esta fragancia excepcional para quienes se atreven a dejarse llevar por la llamada de la noche. Elaborado con la máxima 
-              delicadeza, Phantom Parfum de Rabanne está formulado de manera responsable con los ingredientes más preciados y de 
-              origen ético</p>
-            
-        </div>
+    <div id="producto"></div>
     </section>
 
     <footer class="section-p1">
@@ -162,6 +124,7 @@
 
 
     <script src="script.js"></script>
+    <script src="vista_Phantom.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>

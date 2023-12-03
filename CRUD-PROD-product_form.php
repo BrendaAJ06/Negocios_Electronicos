@@ -1,13 +1,17 @@
 <?php
+header('Content-Type: text/html; charset=utf-8');
 session_start();
 require_once('CRUD-PROD-master.php');
+
 $master = new Master();
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (isset($_POST['id']) && is_numeric($_POST['id']) && $_POST['id'] > 0) {
         $save = $master->update_json_data();
     } else {
         $save = $master->insert_to_json();
     }
+    
     if (isset($save['status'])) {
         if ($save['status'] == 'success') {
             if (isset($_POST['id']) && is_numeric($_POST['id']) && $_POST['id'] > 0)
@@ -21,6 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_SESSION['msg_error'] = 'Los detalles no se pudieron guardar debido a algún error del sistema.';
     }
 }
+
 $data = $master->get_data(isset($_GET['id']) ? $_GET['id'] : '');
 ?>
 <!DOCTYPE html>
@@ -129,7 +134,7 @@ $data = $master->get_data(isset($_GET['id']) ? $_GET['id'] : '');
                                 <?php else: ?>
                                     <p class="text-muted"><i>Agregar Nuevo Usuario</b></i></p>
                                 <?php endif; ?>
-                                <form id="member-form" action="" method="POST">
+                                <form id="product-form" action="" method="POST">
                                     <input type="hidden" name="id" value="<?= isset($data->id) ? $data->id : '' ?>">
                                     <div class="mb-3">
                                         <label for="name" class="form-label">Nombre del Producto</label>
@@ -137,15 +142,25 @@ $data = $master->get_data(isset($_GET['id']) ? $_GET['id'] : '');
                                             required="required" value="<?= isset($data->name) ? $data->name : '' ?>">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="contact" class="form-label">Marca del producto</label>
+                                        <label for="marca" class="form-label">Marca del producto</label>
                                         <input type="text" class="form-control rounded-0" id="contact" name="marca"
                                             required="marca" value="<?= isset($data->marca) ? $data->marca : '' ?>">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="contact" class="form-label">Precio del producto</label>
-                                        <input type="text" class="form-control rounded-0" id="precio" name="precio"
-                                            required="precio" value="<?= isset($data->precio) ? $data->precio : '' ?>">
+                                        <label for="foto" class="form-label">Foto del producto</label>
+                                        <input type="text" class="form-control rounded-0" id="foto" name="foto"
+                                            required="required" value="<?= isset($data->foto) ? $data->foto : '' ?>">
+                                        <?php if (isset($data->foto) && !empty($data->foto)): ?>
+                                            <a href="<?= htmlspecialchars($data->foto) ?>" target="_blank">Ver Foto</a>
+                                        <?php endif; ?>
                                     </div>
+                                    <div class="mb-3">
+                                        <label for="precio" class="form-label">Precio del producto</label>
+                                        <input type="number" step="0.01" class="form-control rounded-0" id="precio"
+                                            name="precio" required="precio"
+                                            value="<?= isset($data->precio) ? number_format($data->precio, 2, '.', '') : '' ?>">
+                                    </div>
+
                                     <div class="mb-3">
                                         <label for="foto" class="form-label">Foto del producto</label>
                                         <textarea rows="3" class="form-control rounded-0" id="foto" name="foto"
@@ -173,11 +188,15 @@ $data = $master->get_data(isset($_GET['id']) ? $_GET['id'] : '');
                             </div>
                         </div>
                         <div class="card-footer text-center">
-                            <button class="btn btn-danger rounded-0" form="member-form"><i class="fa-solid fa-save"></i>
-                                Guardar Usuario</button>
-                            <a class="btn btn-light border rounded-0" href="./"><i class="fa-solid fa-times"></i>
-                                Cancelar</a>
+                            <button class="btn btn-danger rounded-0" form="product-form"
+                                formaction="CRUD-PROD-index.php" type="submit">
+                                <i class="fa-solid fa-save"></i> Guardar Usuario
+                            </button>
+                            <a class="btn btn-light border rounded-0" href="CRUD-PROD-index.php">
+                                <i class="fa-solid fa-times"></i> Cancelar
+                            </a>
                         </div>
+
                     </div>
                 </div>
             </div>

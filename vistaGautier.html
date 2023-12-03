@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eros || Essenitia</title>
+    <title>Gautier || Essenitia</title>
     <meta name="description" content="Bienvenido a Essentia, tu destino para descubrir fragancias exclusivas y experiencias sensoriales únicas. Explora nuestra colección de perfumes de alta calidad que narran historias de elegancia y sofisticación. Descubre la esencia de cada momento con Essentia.">
     <meta name="keywords" content="Essentia, perfumes, fragancias exclusivas, elegancia, sofisticación, experiencias sensoriales, boutique de perfumes">
     <link rel="canonical" href="https://brendaaj06.github.io/Negocios_Electronicos/" />
@@ -52,23 +52,27 @@
 
     <section id="prodetails" class="section-p1">
         <div class="single-pro-image">
-            <img src="perfumes/Versace Eros Eau 1.jpg" width="100%" id="ImgPrinc" alt="Bergamot-Bloom" title="Bergamot-Bloom">
+            <img src="perfumes/JP.jpg" width="100%" id="ImgPrinc" alt="Bergamot-Bloom" title="Bergamot-Bloom">
 
             <div class="small-img-group">
                 <div class="small-img-col">
-                    <img src="perfumes/Versace Eros Eau 2.jpg" width="100" id="peque-img" alt="Bergamot-Bloom" title="Bergamot-Bloom">
+                    <img src="perfumes/JP1.jpg" width="100" id="peque-img" alt="Bergamot-Bloom" title="Bergamot-Bloom">
                 </div>
 
                 <div class="small-img-col">
-                    <img src="perfumes/Versace Eros Eau 3.jpg" width="100" id="peque-img" alt="Bergamot-Bloom" title="Bergamot-Bloom">
+                    <img src="perfumes/JP2.jpg" width="100" id="peque-img" alt="Bergamot-Bloom" title="Bergamot-Bloom">
+                </div>
+
+                  <div class="small-img-col">
+                    <img src="perfumes/JP3.jpg" width="100" id="peque-img" alt="Bergamot-Bloom" title="Bergamot-Bloom">
                 </div>
             </div>
 
             <div></div>
 
         </div>
-
         <div id="producto"></div>
+
     </section>
 
     <footer class="section-p1">
@@ -123,7 +127,7 @@
 
 
     <script src="script.js"></script>
-    <script src="vista_Eros.js"></script>
+    <script src="vista_Gautier.js"> </script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
@@ -134,12 +138,43 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
     <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
-    <script src="aviso-cookies.js"></script>
 
 
     <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
-    <script src="script.js"></script>
+
+     <script
+        src="https://www.paypal.com/sdk/js?client-id=AQPvPUp8GZmhu-ik5onHYRS6skSYR0mR79sySgALgiR8w9AKT7Alw4cFe883FfMz4OYhOFAJkdaYy71t&components=buttons">
+    </script>
+     <script src="https://www.paypal.com/sdk/js?client-id=AQPvPUp8GZmhu-ik5onHYRS6skSYR0mR79sySgALgiR8w9AKT7Alw4cFe883FfMz4OYhOFAJkdaYy71t&currency=MXN">
+</script>
+
+        <script>
+            paypal.Buttons({
+                style: {
+                    layout: 'vertical',
+            border: 'none', /* Elimina el borde del botón */
+            padding: '10px 20px', /* Agrega un espacio interno dentro del botón */  
+            cursor: 'pointer', /* Cambia el cursor del mouse al pasar sobre el botón */
+            color: 'blue',
+            shape: 'rect',
+            label: 'paypal'
+        },
+            createOrder: function (data, actions) {
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value: '2900'
+                        }
+                    }]
+                });
+            },
+            onCancel: function (data) {
+                alert("Pago Cancelado")
+            }
+        }).render('#paypal-payment-button');
+    </script>
+
 
 
     <script src="resena.js"></script>
