@@ -1,0 +1,22 @@
+.styled-container {
+    background-image: linear-gradient(45deg, #D0F288, #8ADAB2);
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  }
+
+  .inner-container {
+    padding: 20px; 
+  }
+
+  .inner-row {
+    background-color: #fff; 
+    border: 1px solid #6c757d; 
+    border-radius: 8px; 
+    margin-bottom: 20px; 
+    padding: 15px; 
+  }
+
+  .inner-col img {
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
