@@ -11,7 +11,7 @@ $json_data = $master->get_all_data();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRUD PHP con datos en JSON</title>
+    <title>CRUD DE PRODUCTOS</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js" integrity="sha512-naukR7I+Nk6gp7p5TMA4ycgfxaZBJ7MO5iC3Fp6ySQyKFHOGfpkSZkYVWV5R7u7cfAicxanwYQ5D1e17EfJcMA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -34,12 +34,12 @@ $json_data = $master->get_all_data();
         <div class="container">
             <a class="navbar-brand" href="./">CRUD PHP con datos en JSON</a>
             <div>
-                <a href="https://www.configuroweb.com/46-aplicaciones-gratuitas-en-php-python-y-javascript/#Aplicaciones-gratuitas-en-PHP,-Python-y-Javascript" class="text-light fw-bolder h6 text-decoration-none" target="_blank">ConfiguroWeb</a>
+                <a href="paneldecontrol.html" style="color: #fff;">Volver a Inicio</a>
             </div>
         </div>
     </nav>
     <div class="container px-5 my-3">
-        <h2 class="text-center">Creación, lectura, actualización y eliminación de datos JSON en PHP</h2>
+        <h2 class="text-center">Creación, lectura, actualización y eliminación de productos de Essentia</h2>
         <div class="row">
             <!-- Page Content Container -->
             <div class="col-lg-10 col-md-11 col-sm-12 mt-4 pt-4 mx-auto">
@@ -64,9 +64,9 @@ $json_data = $master->get_all_data();
                     <div class="card rounded-0 shadow">
                         <div class="card-header">
                             <div class="d-flex justify-content-between">
-                                <div class="card-title col-auto flex-shrink-1 flex-grow-1">CRUD PHP con datos en JSON</div>
+                                <div class="card-title col-auto flex-shrink-1 flex-grow-1">CRUD DE PRODUCTOS</div>
                                 <div class="col-atuo">
-                                    <a class="btn btn-danger btn-sm btn-flat" href="CRUD-PROD-product_form.php"><i class="fa fa-plus-square"></i> Agregar Usuario</a>
+                                    <a class="btn btn-danger btn-sm btn-flat" href="CRUD-PROD-product_form.php"><i class="fa fa-plus-square"></i> Agregar Producto</a>
                                 </div>
                             </div>
                         </div>

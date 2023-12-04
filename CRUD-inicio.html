@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .error-message {
+            color: #ff0000;
+            margin-top: 10px;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .image-container img {
+            width: auto;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-container">
+    <div class="image-container">
+        <img src="img/LOGO.png">
+    </div>
+    <h2>Iniciar Sesión</h2>
+    <form id="loginForm" onsubmit="return validarFormulario()">
+        
+        <label for="usuario">Usuario:</label>
+        <input type="text" id="usuario" name="usuario" required>
+
+        <label for="contrasena">Contraseña:</label>
+        <input type="password" id="contrasena" name="contrasena" required>
+
+        <button type="submit">Iniciar Sesión</button>
+
+        <p class="error-message" id="errorMessage"></p>
+    </form>
+</div>
+
+<script>
+    function validarFormulario() {
+        var usuario = document.getElementById("usuario").value;
+        var contrasena = document.getElementById("contrasena").value;
+        var errorMessage = document.getElementById("errorMessage");
+
+        // Verificar las credenciales
+        if (usuario === "admin" && contrasena === "admin@1234") {
+            // Credenciales correctas, mostrar alerta y luego redirigir
+            alert("Inicio de sesión exitoso");
+            window.location.href = "paneldecontrol.html";
+            return false; // Evitar que el formulario se envíe
+        } else {
+            // Credenciales incorrectas, mostrar mensaje de error
+            errorMessage.textContent = "Usuario o contraseña incorrectos";
+            return false; // Evitar que el formulario se envíe
+        }
+    }
+</script>
+
+</body>
+</html>
