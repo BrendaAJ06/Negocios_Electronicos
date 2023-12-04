@@ -82,7 +82,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 80px;
+  padding: 2.5em 5em;
   background-color: #ffffff;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
   z-index: 999;
@@ -92,42 +92,51 @@ body {
 }
 
 /*INICIO BARRA DE NAVEGACION*/
-#navbar{
+#navbar {
   display: flex;
+  flex-direction: column; /* Cambio a columna en pantallas pequeñas */
   align-items: center;
   justify-content: center;
 }
 
-#navbar li{
+#navbar li {
   list-style: none;
-  padding: 0 20px;
+  padding: 10px 0; /* Ajuste del espacio entre elementos */
   position: relative;
 }
 
-#navbar li a{
+#navbar li a {
   text-decoration: none;
   font-size: 16px;
   font-weight: 600;
   color: #1a1a1a;
   transition: 0.3s ease;
-}
-
-#navbar li a:hover,
-#navbar li a.active {
-  color: #4ebbc5;
+  text-align: center; /* Centrado del texto en pantallas pequeñas */
 }
 
 #navbar li a.active::after,
 #navbar li a:hover::after {
-  content:"";
-  width:30%;
-  height:2px;
+  content: "";
+  width: 100%; /* Ancho completo del contenedor en pantallas pequeñas */
+  height: 2px;
   background: #4ebbc5;
   position: absolute;
   bottom: -4px;
-  left: 20px;
+  left: 0;
+}
+
+/* Media query para pantallas más grandes */
+@media (min-width: 768px) {
+  #navbar {
+    flex-direction: row; /* Volver a la disposición de fila en pantallas más grandes */
+  }
+
+  #navbar li {
+    padding: 0 20px; /* Restaurar el espacio entre elementos */
+  }
 }
 /*FIN BARRA DE NAVEGACION*/
+
 
 /*IMAGEN 1 DE INDEX*/
 #hero{
@@ -136,7 +145,7 @@ body {
   width: 100%;
   background-size: cover;
   background-position: top 25% right 0;
-  padding: 0 80px;
+  padding: 0 5em;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -170,7 +179,7 @@ body {
 
 .carousel-container {
   background-color: #d6d6d6; /* Color de fondo del carrusel */
-  padding: 20px; /* Espacio alrededor del carrusel */
+  padding: 2.5em; /* Espacio alrededor del carrusel */
   max-width: 100%; /* Ancho máximo del carrusel */
   height: 50vh; /* Altura del carrusel igual al 100% del viewport height */
   margin: 0 auto; /* Centrar el carrusel horizontalmente */
@@ -512,3 +521,58 @@ body {
 }
 
 /*FIN FOOTER*/
+
+/* Agregar estilos para el menú de hamburguesas */
+.burger-menu {
+  display: none; /* Ocultar inicialmente */
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.menu-container {
+  display: flex;
+  align-items: center;
+}
+
+#navbar {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+#navbar li {
+  padding: 0 20px;
+}
+
+/* Mostrar el menú de hamburguesas solo en pantallas más pequeñas */
+@media (max-width: 768px) {
+  .burger-menu {
+    display: flex; /* Mostrar en pantallas más pequeñas */
+  }
+
+  #navbar {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Ajustar según sea necesario */
+    left: 0;
+    width: 100%;
+    background-color: #fff; /* Fondo del menú desplegable */
+  }
+
+  #navbar.show {
+    display: flex;
+  }
+
+  #navbar li {
+    padding: 10px 20px;
+  }
+}
