@@ -14,13 +14,20 @@
 </head>
 <body>
   <section id="header">
+    
     <a href="#"><img src="img/LOGO.png" class="logo" alt=" logo" title="Logo"></a>
 
-    <div>
+    <div class="menu-container">
+      <div id="burger-menu" class="burger-menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+
       <ul id="navbar">
-        <li><a class="active" href="index.html" title="Landing-Page">Inicio</a></li>
-        <li><a href="Catalogo.html" title="Catalogo de Productos">Catalogo</a></li>
-        <li><a href="blog.html"title="Agenda">Agenda</a></li>
+        <li><a href="index.html" title="Landing-Page">Inicio</a></li>
+        <li><a class="active" href="Catalogo.html" title="Catalogo de Productos">Catalogo</a></li>
+        <li><a href="blog.html" title="Agenda">Agenda</a></li>
         <li><a href="about.html" title="Sobre Nosotros">Sobre Nosotros</a></li>
         <li><a href="contact.html" title="Contactanos">Contactanos</a></li>
         <li><a href="wish.html" title="Lista de deseos"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
@@ -28,7 +35,6 @@
         <li><a href="sesion.html" title="Iniciar sesion"><i class="fa fa-user-circle" aria-hidden="true"></i></a></li>
       </ul>
     </div>
-
   </section>
       
     <div class="productos">
@@ -51,5 +57,17 @@
 
     <script src="catalogo.js"></script>
     <!-- Asegúrate de incluir tu script JavaScript al final del cuerpo del documento -->
-</body>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const burgerMenu = document.getElementById('burger-menu');
+        const navbar = document.getElementById('navbar');
+    
+        burgerMenu.addEventListener('click', function() {
+          navbar.classList.toggle('show');
+        });
+      });
+    </script>
+
+  </body>
 </html>
