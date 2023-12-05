@@ -14,8 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <h6>${producto.marca}</h6>
                     <h5>${producto.name}</h5>
                     <h2>${producto.precio}</h2>  
-                    <button
-                    onclick="addToCart('img/opencart/dulces-de-la-rosa-caramelos-suaves-aciduladito-800x600.png')">Agregar carrito</button>  
+                      
 
                     <div class="product-description">
                         <h2>Descripcion del producto</h2>
