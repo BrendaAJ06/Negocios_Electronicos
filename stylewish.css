@@ -1,0 +1,88 @@
+ 
+  aside, footer, header, main {
+    display: block;
+  }
+  
+  aside > h2 {
+    text-decoration: underline;
+  }
+  
+  main {
+    background-color: white;
+  }
+  
+  main, header, footer {
+    padding: 5px
+  }
+  
+  h1 {
+    font-family: Tahoma, Arial, Halvetica, sans-serif;
+    color: white;
+    letter-spacing:-2px;
+    margin-bottom: 0;
+  }
+  
+  h2 {
+    color: white;
+  }
+  
+  .center {
+    text-align:center;
+  }
+  
+  /* Styling for wishlist page */
+  
+  #content{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, minmax(200px, auto));
+    grid-gap: 10px;
+    max-width: 800px;
+    margin: 20px auto;
+  }
+  #content div{
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  .product {
+    text-align:center;
+    font-size: 0.9em;
+    line-height: 0.8em;
+  }
+  .product h3 {
+    margin-bottom: 0px;
+    font-style: bold;
+  }
+  
+  /* Grid layout */
+  
+  header { grid-area: header; }
+  
+  main {
+    grid-area: main;
+    width: 90%;
+    max-width: 1300px;
+    margin:auto auto;
+  }
+  
+  aside {
+    grid-area: aside;
+  }
+  
+  footer { grid-area: footer; }
+  
+  #layout {
+    background-color: #efefef;
+  }
+  
+  #layout {
+    display: grid;
+    grid-gap: 10px;
+    padding: 10px;
+    grid-template-areas:
+    'header header header header header'
+    'main main  main main aside'
+    'footer footer footer footer footer';
+  }

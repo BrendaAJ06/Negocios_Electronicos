@@ -53,13 +53,15 @@
         <li><a href="contact.html" title="Contactanos">Contactanos</a></li>
         <li><a href="wish.html" title="Lista de deseos"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
         <li><a href="sesion.html" title="Iniciar sesion"><i class="fa fa-user-circle" aria-hidden="true"></i></a></li>
-      </ul>
-      <form target="paypal" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" >
-        <input type="hidden" name="cmd" value="_cart">
-        <input type="hidden" name="business" value="T72T79GB93S3Q">
-        <input type="hidden" name="display" value="1">
-        <input type="image" src="https://www.paypalobjects.com/es_XC/i/btn/btn_viewcart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+
+        <form target="paypal" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+          <input type="hidden" name="cmd" value="_cart">
+          <input type="hidden" name="business" value="T72T79GB93S3Q">
+          <input type="hidden" name="display" value="1">
+          <input type="image" src="https://www.paypalobjects.com/es_XC/i/btn/btn_viewcart_LG.gif" border="0"
+            name="submit" alt="PayPal - The safer, easier way to pay online!">
         </form>
+      </ul>
     </div>
   </section>
 
@@ -92,6 +94,9 @@
       <input type="image" src="https://www.paypalobjects.com/es_XC/i/btn/btn_cart_LG.gif" border="0" name="submit"
         title="PayPal es una forma segura y fácil de pagar en línea." alt="Agregar al carrito" />
     </form>
+    <a href="#" class="btn btn-outline-danger compact-btn" style="padding: 0.25rem 0.5rem;"
+      onclick="agregar('Phantom Le Parfum','vistaPhantom.html', '', '2150', 'Phantom Parfum de Rabanne es la esencia misma de la masculinidad, alimentada por pasiones ardientes, que revela un aura seductora. Inspirada en las diferentes facetas de la masculinidad moderna, esta mezcla intensa combina lavanda electrizante, vainilla adictiva y vetiver seductor.')">
+      <i class="fa fa-heart fa-sm"></i></a>
   </section>
 
   <div class="container">
@@ -156,6 +161,7 @@
 
 
   <script src="script.js"></script>
+  <script src="wishes.js"></script>
   <script src="vista_Phantom.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"

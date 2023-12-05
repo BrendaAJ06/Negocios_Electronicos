@@ -163,3 +163,13 @@
     padding-top: 30px;
     margin-left: 25px;
 }
+
+/* En tu archivo style.css o donde manejes estilos */
+#prodetails .compact-btn {
+    padding: 0.25rem 0.5rem; /* Ajusta el relleno según sea necesario */
+}
+
+/* Opcional: Si deseas ajustar el tamaño del ícono aún más */
+#prodetails .compact-btn i.fa {
+    font-size: 14px; /* Ajusta el tamaño del ícono según sea necesario */
+}
