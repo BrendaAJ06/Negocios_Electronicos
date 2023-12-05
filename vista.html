@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bergamont || Essentia</title>
+    <title>212 VIP Rose || Essenitia</title>
     <meta name="description"
         content="Bienvenido a Essentia, tu destino para descubrir fragancias exclusivas y experiencias sensoriales únicas. Explora nuestra colección de perfumes de alta calidad que narran historias de elegancia y sofisticación. Descubre la esencia de cada momento con Essentia.">
     <meta name="keywords"
@@ -27,6 +27,7 @@
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
+
         gtag('config', 'G-4LTLCWXEBE');
     </script>
 
@@ -59,27 +60,28 @@
 
     <section id="prodetails" class="section-p1">
         <div class="single-pro-image">
-            <img src="perfumes/Bergamot-Bloom.jpg" width="100%" id="ImgPrinc" alt="Bergamot-Bloom"
-                title="Bergamot-Bloom">
+            <img src="perfumes/212 VIP Rose.jpg" width="100%" id="ImgPrinc" alt="Bergamot-Bloom" title="Bergamot-Bloom">
 
             <div class="small-img-group">
                 <div class="small-img-col">
-                    <img src="perfumes/Bergamot-Bloom2.jpg" width="100" id="peque-img" alt="Bergamot-Bloom"
+                    <img src="perfumes/212 VIP Rose2.jpg" width="100" id="peque-img" alt="Bergamot-Bloom"
                         title="Bergamot-Bloom">
                 </div>
+
                 <div class="small-img-col">
-                    <img src="perfumes/Bergamot-Bloom3.jpg" width="100" id="peque-img" alt="Bergamot-Bloom"
+                    <img src="perfumes/212 VIP Rose3.jpg" width="100" id="peque-img" alt="Bergamot-Bloom"
                         title="Bergamot-Bloom">
                 </div>
             </div>
         </div>
-
-        <div id="producto">
-
-        </div>
+        <div id="producto"></div>
+<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+            <input type="hidden" name="cmd" value="_s-xclick" />
+            <input type="hidden" name="hosted_button_id" value="UFKANYGJYRCC8" />
+            <input type="hidden" name="currency_code" value="MXN" />
+            <input type="image" src="https://www.paypalobjects.com/es_XC/i/btn/btn_cart_LG.gif" border="0" name="submit" title="PayPal es una forma segura y fácil de pagar en línea." alt="Agregar al carrito" />
+          </form>
     </section>
-
-
 
     <footer class="section-p1">
         <div class="col">
@@ -88,8 +90,6 @@
             <p><strong>Direccion:</strong>Av. Adolfo López Mateos Ote. 1801, Bona Gens, 20256 Aguascalientes, Ags.</p>
             <p><strong>Telefono:</strong>449 960 9129</p>
             <p><strong>Horario de Atencion:</strong>9:00 - 20:00,Lunes - Domingos</p>
-
-
         </div>
     </footer>
 
@@ -127,6 +127,7 @@
 
       <ul id="commentList"></ul>
 
+
     <script>
         var MainImg = document.getElementById("ImgPrinc");
         var smallimgs = document.getElementsByClassName("small-img-col"); // Cambié el selector
@@ -144,8 +145,8 @@
 
 
 
-    <script src="vista_Bergamont.js"></script>
     <script src="script.js"></script>
+    <script src="vista_212VIP.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
@@ -161,39 +162,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
-
-    <script
-        src="https://www.paypal.com/sdk/js?client-id=AQPvPUp8GZmhu-ik5onHYRS6skSYR0mR79sySgALgiR8w9AKT7Alw4cFe883FfMz4OYhOFAJkdaYy71t&components=buttons">
-        </script>
-    <script
-        src="https://www.paypal.com/sdk/js?client-id=AQPvPUp8GZmhu-ik5onHYRS6skSYR0mR79sySgALgiR8w9AKT7Alw4cFe883FfMz4OYhOFAJkdaYy71t&currency=MXN">
-        </script>
-
-    <script>
-        paypal.Buttons({
-            style: {
-                layout: 'vertical',
-                border: 'none', /* Elimina el borde del botón */
-                padding: '10px 20px', /* Agrega un espacio interno dentro del botón */
-                cursor: 'pointer', /* Cambia el cursor del mouse al pasar sobre el botón */
-                color: 'blue',
-                shape: 'rect',
-                label: 'paypal'
-            },
-            createOrder: function (data, actions) {
-                return actions.order.create({
-                    purchase_units: [{
-                        amount: {
-                            value: '7301'
-                        }
-                    }]
-                });
-            },
-            onCancel: function (data) {
-                alert("Pago Cancelado")
-            }
-        }).render('#paypal-payment-button');
-    </script>
+    <script src="script.js"></script>
 
 
     <script src="resena.js"></script>
