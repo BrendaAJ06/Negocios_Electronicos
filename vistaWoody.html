@@ -44,8 +44,8 @@
           </div>
     
           <ul id="navbar">
-            <li><a class="active" href="index.html" title="Landing-Page">Inicio</a></li>
-            <li><a href="Catalogo.html" title="Catalogo de Productos">Catalogo</a></li>
+            <li><a href="index.html" title="Landing-Page">Inicio</a></li>
+            <li><a class="active" href="Catalogo.html" title="Catalogo de Productos">Catalogo</a></li>
             <li><a href="blog.html" title="Agenda">Agenda</a></li>
             <li><a href="about.html" title="Sobre Nosotros">Sobre Nosotros</a></li>
             <li><a href="contact.html" title="Contactanos">Contactanos</a></li>
@@ -74,6 +74,8 @@
 
         </div>
         <div id="producto"></div>
+
+        <div id="paypal-button-container" style="max-width:1000px; margin-right: 10px;"></div>
         <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_blank">
   <input type="hidden" name="cmd" value="_s-xclick" />
   <input type="hidden" name="hosted_button_id" value="NQ4FB3FYBQEPC" />
@@ -82,38 +84,49 @@
 </form>
     </section>
 
-    <footer class="section-p1">
-        <div class="col">
-            <img class="logo" src="img/LOGO.png" alt="logo" title="logo de la empresa">
-            <h4>Contact</h4>
-            <p><strong>Direccion:</strong>Av. Adolfo López Mateos Ote. 1801, Bona Gens, 20256 Aguascalientes, Ags.</p>
-            <p><strong>Telefono:</strong>449 960 9129</p>
-            <p><strong>Horario de Atencion:</strong>9:00 - 20:00,Lunes - Domingos</p>
-        </div>
-    </footer>
-
     <div class="container">
-        <h2>Ingrese un Comentario</h2>
-        <form id="commentForm">
-          <div class="form-group">
-            <label for="name">Nombre:</label>
-            <input type="text" id="name" name="name" required>
-          </div>
-          <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-          </div>
-          <div class="form-group">
-            <label for="comment">Comentario:</label>
-            <textarea id="comment" name="comment" required></textarea>
-          </div>
-          <div class="form-group">
-            <button type="submit">Enviar</button>
-          </div>
-        </form>
+      <h2>Ingrese un Comentario</h2>
+      <form id="commentForm">
+        <div class="form-group">
+          <label for="name">Nombre:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="comment">Comentario:</label>
+          <textarea id="comment" name="comment" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="rating">Puntuación:</label>
+          <select id="rating" name="rating" required>
+            <option value="1">1 (Muy malo)</option>
+            <option value="2">2 (Malo)</option>
+            <option value="3">3 (Normal)</option>
+            <option value="4">4 (Bueno)</option>
+            <option value="5">5 (Muy bueno)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <button type="submit">Enviar</button>
+        </div>
+      </form>
+    </div>
+  
+  
+    <ul id="commentList"></ul>
+  
+    <footer class="section-p1">
+      <div class="col">
+        <img class="logo" src="img/LOGO.png" alt="logo" title="logo de la empresa">
+        <h4>Contact</h4>
+        <p><strong>Direccion:</strong>Av. Adolfo López Mateos Ote. 1801, Bona Gens, 20256 Aguascalientes, Ags.</p>
+        <p><strong>Telefono:</strong>449 960 9129</p>
+        <p><strong>Horario de Atencion:</strong>9:00 - 20:00,Lunes - Domingos</p>
       </div>
-
-      <ul id="commentList"></ul>
+    </footer>
 
 
     <script>
@@ -151,60 +164,50 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
 
-     <script
-        src="https://www.paypal.com/sdk/js?client-id=AQPvPUp8GZmhu-ik5onHYRS6skSYR0mR79sySgALgiR8w9AKT7Alw4cFe883FfMz4OYhOFAJkdaYy71t&components=buttons">
-    </script>
-     <script src="https://www.paypal.com/sdk/js?client-id=AQPvPUp8GZmhu-ik5onHYRS6skSYR0mR79sySgALgiR8w9AKT7Alw4cFe883FfMz4OYhOFAJkdaYy71t&currency=MXN">
-</script>
+     
+  <script src="resena.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const burgerMenu = document.getElementById('burger-menu');
+      const navbar = document.getElementById('navbar');
 
-        <script>
-            paypal.Buttons({
-                style: {
-                    layout: 'vertical',
-            border: 'none', /* Elimina el borde del botón */
-            padding: '10px 20px', /* Agrega un espacio interno dentro del botón */  
-            cursor: 'pointer', /* Cambia el cursor del mouse al pasar sobre el botón */
-            color: 'blue',
-            shape: 'rect',
-            label: 'paypal'
-        },
-            createOrder: function (data, actions) {
-                return actions.order.create({
-                    purchase_units: [{
-                        amount: {
-                            value: '3850'
-                        }
-                    }]
-                });
-            },
-            onCancel: function (data) {
-                alert("Pago Cancelado")
+      burgerMenu.addEventListener('click', function () {
+        navbar.classList.toggle('show');
+      });
+    });
+  </script>
+
+  <script
+    src="https://www.paypal.com/sdk/js?client-id=AQPvPUp8GZmhu-ik5onHYRS6skSYR0mR79sySgALgiR8w9AKT7Alw4cFe883FfMz4OYhOFAJkdaYy71t&components=buttons">
+    </script>
+  <script
+    src="https://www.paypal.com/sdk/js?client-id=AQPvPUp8GZmhu-ik5onHYRS6skSYR0mR79sySgALgiR8w9AKT7Alw4cFe883FfMz4OYhOFAJkdaYy71t&currency=MXN">
+    </script>
+  <script>
+    paypal.Buttons({
+      style: {
+        layout: 'vertical',
+        border: 'none', /* Elimina el borde del botón */
+        padding: '10px 20px', /* Agrega un espacio interno dentro del botón */
+        cursor: 'pointer', /* Cambia el cursor del mouse al pasar sobre el botón */
+        color: 'blue',
+        shape: 'rect',
+        label: 'paypal'
+      },
+      createOrder: function (data, actions) {
+        return actions.order.create({
+          purchase_units: [{
+            amount: {
+              value: '999'
             }
-        }).render('#paypal-payment-button');
-    </script>
-
-
-    <script src="resena.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-          const burgerMenu = document.getElementById('burger-menu');
-          const navbar = document.getElementById('navbar');
-      
-          burgerMenu.addEventListener('click', function() {
-            navbar.classList.toggle('show');
-          });
+          }]
         });
-      </script>
-      <script>
-        document.addEventListener('DOMContentLoaded', function() {
-          const burgerMenu = document.getElementById('burger-menu');
-          const navbar = document.getElementById('navbar');
-      
-          burgerMenu.addEventListener('click', function() {
-            navbar.classList.toggle('show');
-          });
-        });
-      </script>
+      },
+      onCancel: function (data) {
+        alert("Pago Cancelado")
+      }
+    }).render('#paypal-button-container');
+  </script>
 </body>
 
 </html>

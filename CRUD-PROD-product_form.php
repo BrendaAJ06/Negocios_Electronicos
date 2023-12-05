@@ -35,7 +35,7 @@ $data = $master->get_data(isset($_GET['id']) ? $_GET['id'] : '');
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario de Ingreso de Usuario | PHP-JSON CRUD</title>
+    <title>Formulario de Productos</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
@@ -64,15 +64,15 @@ $data = $master->get_data(isset($_GET['id']) ? $_GET['id'] : '');
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-danger bg-gradient">
         <div class="container">
-            <a class="navbar-brand" href="./">PHP - JSON CRUD</a>
+            <a class="navbar-brand" href="CRUD-PROD-index.php">CRUD DE PRODUCTOS</a>
             <div>
                 <a href="https://www.configuroweb.com/46-aplicaciones-gratuitas-en-php-python-y-javascript/#Aplicaciones-gratuitas-en-PHP,-Python-y-Javascript"
-                    class="text-light fw-bolder h6 text-decoration-none" target="_blank">ConfiguroWeb</a>
+                    class="text-light fw-bolder h6 text-decoration-none" target="_blank">Essentia</a>
             </div>
         </div>
     </nav>
     <div class="container px-5 my-3">
-        <h2 class="text-center">Formulario de Ingreso de Usuario</h2>
+        <h2 class="text-center">Formulario de Ingreso de Productos</h2>
         <div class="row">
             <!-- Contenedor de contenido de página -->
             <div class="col-lg-10 col-md-11 col-sm-12 mt-4 pt-4 mx-auto">
@@ -121,7 +121,7 @@ $data = $master->get_data(isset($_GET['id']) ? $_GET['id'] : '');
                                 </div>
                                 <div class="col-atuo">
                                     <button class="btn btn-danger btn-sm btn-flat" id="add"><i
-                                            class="fa fa-plus-square"></i> Agregar Usuario</button>
+                                            class="fa fa-plus-square"></i> Agregar Producto</button>
                                 </div>
                             </div>
                         </div>
@@ -132,7 +132,7 @@ $data = $master->get_data(isset($_GET['id']) ? $_GET['id'] : '');
                                                 <?= isset($data->name) ? $data->name : '' ?>
                                             </b></i></p>
                                 <?php else: ?>
-                                    <p class="text-muted"><i>Agregar Nuevo Usuario</b></i></p>
+                                    <p class="text-muted"><i>Agregar Nuevo Producto</b></i></p>
                                 <?php endif; ?>
                                 <form id="product-form" action="" method="POST">
                                     <input type="hidden" name="id" value="<?= isset($data->id) ? $data->id : '' ?>">
@@ -159,13 +159,7 @@ $data = $master->get_data(isset($_GET['id']) ? $_GET['id'] : '');
                                         <input type="number" step="0.01" class="form-control rounded-0" id="precio"
                                             name="precio" required="precio"
                                             value="<?= isset($data->precio) ? number_format($data->precio, 2, '.', '') : '' ?>">
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <label for="foto" class="form-label">Foto del producto</label>
-                                        <textarea rows="3" class="form-control rounded-0" id="foto" name="foto"
-                                            required="required"><?= isset($data->foto) ? $data->foto : '' ?></textarea>
-                                    </div>
+                                    </div>  
                                     <div class="mb-3">
                                         <label for="descCorta" class="form-label">Descripcion corta del producto</label>
                                         <textarea rows="3" class="form-control rounded-0" id="descCorta"
@@ -188,8 +182,7 @@ $data = $master->get_data(isset($_GET['id']) ? $_GET['id'] : '');
                             </div>
                         </div>
                         <div class="card-footer text-center">
-                            <button class="btn btn-danger rounded-0" form="product-form"
-                                formaction="CRUD-PROD-index.php" type="submit">
+                            <button class="btn btn-danger rounded-0" form="product-form" type="submit">
                                 <i class="fa-solid fa-save"></i> Guardar Usuario
                             </button>
                             <a class="btn btn-light border rounded-0" href="CRUD-PROD-index.php">
