@@ -13,18 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <div class="single-pro-details">
                     <h6>${producto.marca}</h6>
                     <h5>${producto.name}</h5>
-                    <h2>${producto.precio}</h2>  
-                   <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-  <input type="hidden" name="cmd" value="_s-xclick" />
-  <input type="hidden" name="hosted_button_id" value="FH8SSYNKNDAFC" />
-  <input type="hidden" name="currency_code" value="MXN" />
-  <input type="image" src="https://www.paypalobjects.com/es_XC/i/btn/btn_cart_LG.gif" border="0" name="submit" title="PayPal es una forma segura y fácil de pagar en línea." alt="Agregar al carrito" />
-</form><form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-  <input type="hidden" name="cmd" value="_s-xclick" />
-  <input type="hidden" name="hosted_button_id" value="FH8SSYNKNDAFC" />
-  <input type="hidden" name="currency_code" value="MXN" />
-  <input type="image" src="https://www.paypalobjects.com/es_XC/i/btn/btn_cart_LG.gif" border="0" name="submit" title="PayPal es una forma segura y fácil de pagar en línea." alt="Agregar al carrito" />
-</form> 
+                    <h2>${producto.precio}</h2> 
 
                     <div class="product-description">
                         <h2>Descripcion del producto</h2>
