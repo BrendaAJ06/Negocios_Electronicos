@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <title>CRUD DE PRODUCTOS</title>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+              <a class="navbar-item" href="/">CRUD de Productos</a>
+
+            </div>
+          </nav>
+    </header>
+    <main class="main-content">
+        <div class="crud-container">
+            <div clas="crud-header">
+                <h1>Productos Registrados</h1>
+                <button class="button is-success" id="openRegisterModal">Nuevo Producto</button>
+            </div>
+            <table id="productos" class="table">
+                <thead>
+                  <tr>
+                    <th>Nombre</th>
+                    <th>Marca</th>
+                    <th>Precio</th>
+                    <th>Descripcion Corta</th>
+                    <th>Descripcion Larga</th>
+                    <th>Foto</th>
+                    <th>Link</th>
+                    <th>Editar</th>
+                    <th>Eliminar</th>
+                  </tr>
+                </thead>
+                
+                <tbody>
+                  <!-- <tr>
+                    <th>1</th>
+                    <td>Bergamot Bloom</td>
+                    <td>Carolina Herrera</td>
+                    <td>7380</td>
+                    <td>Bergamot Bloom expresa una sensacion de paz 
+                        interior similar a la del magico silencio de un hogar vacacional. 
+                    </td>
+                    <td>Bergamot Bloom comienza con una frescura radiante que gradualmente se 
+                        va transformando en un aroma floral.</td>
+                    <td>https://i.ibb.co/yYsHC4M/Bergamot-Bloom.jpg</td>
+                    <td>vista.html</td>
+                    <td>
+                        <button class="button is-warning">Editar</button>
+                        <button class="button is-danger">Eliminar</button>
+                    </td>
+                  </tr> -->
+
+                  
+                </tbody>
+              </table>
+        </div>
+    </main>
+    <div class="modal" id="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+          <header class="modal-card-head">
+            <p class="modal-card-title">Registrar Nuevo Producto</p>
+            <button class="delete" aria-label="close" id="closeRegisterModal"></button>
+          </header>
+          <section class="modal-card-body">
+            <form id="register-form">
+                <div class="field">
+                    <label class="label">Nombre</label>
+                    <div class="control">
+                      <input id="formnombre" class="input" type="text" name="nombre" placeholder="Nombre del Producto">
+                    </div>
+                  </div>
+                  
+                  <div class="field">
+                    <label class="label">Marca</label>
+                    <div class="control">
+                      <input id="formmarca" class="input" type="text" name="marca" placeholder="Marca del Producto">
+                    </div>
+                  </div>
+
+                  <div class="field">
+                    <label class="label">Precio</label>
+                    <div class="control has-icons-left has-icons-right">
+                      <input id="formprecio" class="input" type="number" name="precio" placeholder="Ingrese el valor">
+                    </div>
+                  </div>
+
+                  <div class="field">
+                    <label class="label">Descripcion Corta</label>
+                    <div class="control">
+                      <textarea id="formdescorta" class="textarea" name="desc_corta" placeholder="Ingresa la descripcion corta"></textarea>
+                    </div>
+                  </div>
+
+                  <div class="field">
+                    <label class="label">Descripcion Larga</label>
+                    <div class="control">
+                      <textarea id="formdeslarga" class="textarea" name="desc_larga"placeholder="Ingresa la descripcion largs"></textarea>
+                    </div>
+                  </div>
+
+                  <div class="field">
+                    <label class="label">Foto</label>
+                    <div class="control">
+                      <input id="formfoto" class="input" type="url" name="foto" placeholder="Link de la foto del Producto">
+                    </div>
+                  </div>
+                  
+                  <div class="field">
+                    <label class="label">Link</label>
+                    <div class="control">
+                      <input id="formlink" class="input" type="url" name="link" placeholder="Link del Producto">
+                    </div>
+                  </div>
+            </form>
+          </section>
+          <footer class="modal-card-foot">
+            <button id="agregarProducto" class="button is-success">Registrar</button>
+          </footer>
+        </div>
+      </div>
+
+      <div class="modal" id="modal2">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+          <header class="modal-card-head">
+            <p class="modal-card-title">Editar Producto</p>
+            <button class="delete" aria-label="close" id="closeRegisterModal2"></button>
+          </header>
+          <section class="modal-card-body">
+            <form id="register-form">
+                <div class="field">
+                    <label class="label">Nombre</label>
+                    <div class="control">
+                      <input id="formnombre2" class="input" type="text" name="nombre" placeholder="Nombre del Producto">
+                    </div>
+                  </div>
+                  
+                  <div class="field">
+                    <label class="label">Marca</label>
+                    <div class="control">
+                      <!--Poner ID a cada input-->
+                      <input id="formmarca2" class="input" type="text" name="marca" placeholder="Marca del Producto">
+                    </div>
+                  </div>
+
+                  <div class="field">
+                    <label class="label">Precio</label>
+                    <div class="control has-icons-left has-icons-right">
+                      <input id="formprecio2" class="input" type="number" name="precio" placeholder="Ingrese el valor">
+                    </div>
+                  </div>
+
+                  <div class="field">
+                    <label class="label">Descripcion Corta</label>
+                    <div class="control">
+                      <textarea id="formdescorta2" class="textarea" name="desc_corta" placeholder="Ingresa la descripcion corta"></textarea>
+                    </div>
+                  </div>
+
+                  <div class="field">
+                    <label class="label">Descripcion Larga</label>
+                    <div class="control">
+                      <textarea id="formdeslarga2" class="textarea" name="desc_larga"placeholder="Ingresa la descripcion largs"></textarea>
+                    </div>
+                  </div>
+
+                  <div class="field">
+                    <label class="label">Foto</label>
+                    <div class="control">
+                      <input id="formfoto2" class="input" type="url" name="foto" placeholder="Link de la foto del Producto">
+                    </div>
+                  </div>
+                  
+                  <div class="field">
+                    <label class="label">Link</label>
+                    <div class="control">
+                      <input id="formlink2" class="input" type="url" name="link" placeholder="Link del Producto">
+                    </div>
+                  </div>
+            </form>
+          </section>
+          <footer class="modal-card-foot">
+            <button id="editarProducto" class="button is-success">Actualizar</button>
+          </footer>
+        </div>
+      </div>
+      <script  src="js/app2.js"></script>
+      <!-- <script src="js/app.js"></script> -->
+</body>
+</html>
