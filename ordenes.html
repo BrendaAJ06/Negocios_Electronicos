@@ -58,107 +58,8 @@
       </ul>
     </div>
   </section>
-  <div class="container-lg styled-container">
-    <div class="container text-center pt-5 inner-container">
-      <div class="row inner-row">
-        <div class="col">
-          <p class="h3 text-left text-dark pt-3">Compra realizada:</p>
-        </div>
-        <div class="col">
-          <p class="h5 text-left text-primary pt-4"> 6 de Octubre 2023</p>
-        </div>
-      </div>
-      <div class="row inner-row pt-5">
-        <div class="col">
-          <div class="text-center">
-            <img src="perfumes/Bergamot-Bloom2.jpg" class="rounded" alt="Bergamot-Bloom" width="150" height="150">
-          </div>
-        </div>
-        <div class="col">
-          <p class="h4 text-left text-dark">Estado</p>
-          <p class="h5 text-left text-success">Entregado</p>
-          <p class="h4 text-left text-dark">Producto</p>
-          <p class="h5 text-left text-secondary">Bergamot-Bloom</p>
-          <p class="h4 text-left text-dark">Cantidad</p>
-          <p class="h5 text-left text-secondary">1</p>
-          <p class="h4 text-left text-dark">Fecha de entrega</p>
-          <p class="h5 text-left text-secondary">13 de Octubre del 2023</p>
-        </div>
-        <div class="col">
-          <p class="h4 text-left text-dark">Entregado en;</p>
-          <p class="h5 text-left text-secondary"> Segunda cerrada #110, Residencial El parque, C.P. 20277,
-            Aguascalientes, Ags.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="container text-center pt-5 inner-container">
-    <div class="row inner-row">
-      <div class="col">
-        <p class="h3 text-left text-dark pt-3">Compra realizada:</p>
-      </div>
-      <div class="col">
-        <p class="h5 text-left text-primary pt-4"> 3 de Octubre 2023</p>
-      </div>
-    </div>
-    <div class="row inner-row pt-5">
-      <div class="col">
-        <div class="text-center">
-          <img src="perfumes/Versace Eros Eau 1.jpg" class="rounded" alt="Eros Eau de Toilette" width="150" height="150">
-        </div>
-      </div>
-      <div class="col">
-        <p class="h4 text-left text-dark">Estado</p>
-        <p class="h5 text-left text-warning">Esperando Pago</p>
-        <p class="h4 text-left text-dark">Producto</p>
-        <p class="h5 text-left text-secondary">Eros Eau de Toilette</p>
-        <p class="h4 text-left text-dark">Cantidad</p>
-        <p class="h5 text-left text-secondary">1</p>
-        <p class="h4 text-left text-dark">Fecha de entrega</p>
-        <p class="h5 text-left text-warning">Esperando pago</p>
-      </div>
-      <div class="col">
-        <p class="h4 text-left text-dark">Entregar en:</p>
-        <p class="h5 text-left text-secondary">Segunda cerrada #110, Residencial El parque, C.P. 20277,
-          Aguascalientes, Ags.</p>
-      </div>
-    </div>
-  </div>
+  <div id="ordenesDeCompra"></div>
 
-  <div class="container text-center pt-5 inner-container">
-    <div class="row inner-row">
-      <div class="col">
-        <p class="h3 text-left text-dark pt-3">Compra realizada:</p>
-      </div>
-      <div class="col">
-        <p class="h5 text-left text-primary pt-4"> 26 de Febrero 2023</p>
-      </div>
-    </div>
-    <div class="row inner-row pt-5">
-      <div class="col">
-        <div class="text-center">
-          <img src="perfumes/Sauvage.jpg" class="rounded" alt="Sauvage Parfum" width="150" height="150">
-        </div>
-      </div>
-      <div class="col">
-        <p class="h4 text-left text-dark">Estado</p>
-        <p class="h5 text-left text-danger">Cancelada</p>
-        <p class="h4 text-left text-dark">Producto</p>
-        <p class="h5 text-left text-secondary">Sauvage Parfum</p>
-        <p class="h4 text-left text-dark">Cantidad</p>
-        <p class="h5 text-left text-secondary">2</p>
-        <p class="h4 text-left text-dark">Fecha de entrega</p>
-        <p class="h5 text-left text-danger">Cancelada</p>
-      </div>
-      <div class="col">
-        <p class="h4 text-left text-dark">Entregar en:</p>
-        <p class="h5 text-left text-secondary">Segunda cerrada #110, Residencial El parque, C.P. 20277,
-          Aguascalientes, Ags.</p>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
 <footer class="section-p1">
   <div class="col">
     <img class="logo" src="img/LOGO.png" alt="logo" title="logo de la empresa">
@@ -172,6 +73,80 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
+    const ordenesDeCompra = {
+      "ordenesDeCompra": [
+        {
+          "fechaCompra": "6 de Octubre 2023",
+          "producto": "Bergamot-Bloom",
+          "estado": "Entregado",
+          "cantidad": 1,
+          "fechaEntrega": "16 de Octubre del 2023",
+          "direccionEntrega": "Segunda cerrada #110, Residencial El parque, C.P. 20277, Aguascalientes, Ags.",
+        },
+        {
+          "fechaCompra": "8 de Octubre 2023",
+          "producto": "Bergamot-Bloom",
+          "estado": "Cancelado",
+          "cantidad": 15,
+          "fechaEntrega": " ",
+          "direccionEntrega": "Segunda cerrada #110, Residencial El parque, C.P. 20277, Aguascalientes, Ags."
+        },{
+          "fechaCompra": "6 de Octubre 2023",
+          "producto": "Classic Black",
+          "estado": "Entregado",
+          "cantidad": 1,
+          "fechaEntrega": "02 de Octubre del 2023",
+          "direccionEntrega": "Segunda cerrada #110, Residencial El parque, C.P. 20277, Aguascalientes, Ags."
+        }
+        
+      ]
+    };
+
+    function mostrarOrdenesDeCompra() {
+      const contenedor = document.getElementById('ordenesDeCompra');
+
+      ordenesDeCompra.ordenesDeCompra.forEach((orden) => {
+        const ordenDiv = document.createElement('div');
+        ordenDiv.className = 'container-lg styled-container';
+
+        const innerContainer = document.createElement('div');
+        innerContainer.className = 'container text-center pt-5 inner-container';
+
+        // Crear elementos HTML para cada propiedad de la orden y añadirlos a innerContainer
+        const fechaCompraElement = document.createElement('p');
+        fechaCompraElement.className = 'h3 text-left text-dark pt-3';
+        fechaCompraElement.textContent = `Compra realizada: ${orden.fechaCompra}`;
+        innerContainer.appendChild(fechaCompraElement);
+
+        const estadoCompraElement = document.createElement('p');
+        estadoCompraElement.className = 'h3 text-left text-dark pt-3';
+        estadoCompraElement.textContent = `Estado de compra: ${orden.estado}`;
+        innerContainer.appendChild(estadoCompraElement);
+
+        const cantidadCompraElement = document.createElement('p');
+        cantidadCompraElement.className = 'h3 text-left text-dark pt-3';
+        cantidadCompraElement.textContent = `cantidad de compra: ${orden.cantidad}`;
+        innerContainer.appendChild(cantidadCompraElement);
+
+
+        const fechaEntregaElement = document.createElement('p');
+        fechaEntregaElement.className = 'h5 text-left text-primary pt-4';
+        fechaEntregaElement.textContent = orden.fechaEntrega;
+        innerContainer.appendChild(fechaEntregaElement);
+
+        // Repite este proceso para cada propiedad que quieras mostrar
+
+        // Añadir innerContainer al ordenDiv
+        ordenDiv.appendChild(innerContainer);
+
+        // Añadir ordenDiv al contenedor principal
+        contenedor.appendChild(ordenDiv);
+      });
+    }
+
+    // Llamar a la función para mostrar las órdenes de compra cuando se cargue la página
+    mostrarOrdenesDeCompra();
+
     const burgerMenu = document.getElementById('burger-menu');
     const navbar = document.getElementById('navbar');
 
