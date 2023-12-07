@@ -71,8 +71,8 @@ const render = (data) => {
         c1.innerText = element.name;
         c2.innerText = element.marca;
         c3.innerText = element.precio;
-        c4.innerText = element.marca;
-        c5.innerText = element.marca;
+        c4.innerText = element.descCorta;
+        c5.innerText = element.descLarga;
         c6.innerText = element.foto;
         c7.innerText = element.link;
         c8.innerHTML = `<button type="button" data-index='${index}' onclick="indexAEditar(${index})">Editar</button>`;
